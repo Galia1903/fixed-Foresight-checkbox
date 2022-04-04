@@ -1,38 +1,229 @@
-.App {
-  text-align: center;
+html {
+  background-color: #616161;
+  font-family: "SF Pro", "helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding:50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 200px;
+  background-color: #2d2d2d;
+  border-radius: 7px;
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 13px;
+  margin-bottom:50px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  width: 169px;
   display: flex;
   flex-direction: column;
+}
+
+
+
+.tField {
+  margin-top: 11px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 0.5px solid rgba(255, 255, 255, 0.05);
+  box-sizing: border-box;
+  box-shadow: inset 0px 0.5px 0px rgba(255, 255, 255, 0.05),
+    inset 0px -1px 0px rgba(255, 255, 255, 0.08),
+    inset 0px -0.5px 0px rgba(255, 255, 255, 0.09),
+    inset 0px 1.5px 1.5px rgba(0, 0, 0, 0.1);
+
+  font-family: "SF Pro", "helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+
+  letter-spacing: -0.08px;
+  padding-left: 4px;
+
+  color: rgba(225, 225, 225, 0.85);
+
+  outline-style: none;
+  width: 100%;
+}
+
+.tField::placeholder {
+  color: rgba(225, 225, 225, 0.4);
+}
+
+.tField:focus {
+  border-color: rgba(26, 163, 255, 0.5);
+}
+
+.check:focus{
+ outline-style: solid;
+outline-color: rgba(23, 104, 229, 1);
+
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #4c4c4c;
+  margin-top: 12px;
+}
+
+.search {
+  padding: 0;
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: inset 0px 0.5px 0px rgba(255, 255, 255, 0.12),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  text-align: center;
+  width: 100%;
+}
+
+.row {
+  margin-left: 16px;
+  height: 20px;
+  margin-top: 18px;
+}
+
+.option-row {
+  height: 20px;
+  margin-top: 10px;
+}
+
+label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  margin-left: 2px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "SF Pro", "helvetica", sans-serif;
+}
+
+label:hover{
+  cursor:pointer;
+}
+
+.reset {
+  font-size: 10px;
+  margin-top: 28px;
+  align-self: flex-end;
+  float:right;
+}
+
+.reset:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.reset:active{
+  opacity:100%;
+}
+
+.select-all-btn{
+  display:none;
+}
+
+.select-all-label{
+  color: #53a6fc !important;
+  font-size: 10px;
+}
+
+.btn {
+ background: linear-gradient(180deg, #1768E5 0%, #145CCC 100%);
+box-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.4), 0px 0.5px 1.5px rgba(0, 0, 0, 0.2), inset 0px 0.5px 0px rgba(255, 255, 255, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.06);
+border-radius: 3.5px;
+  font-size: 13px;
+  line-height: 20px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  letter-spacing: -0.08px;
+margin-top:25px;
+  margin-bottom:17px;
+  color: rgba(255,255,255,.9);
+
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover{
+  cursor:pointer;
+  background: linear-gradient(180deg, #1768E5 0%, #1F66D4 100%);
+
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:active{
+  background: linear-gradient(180deg, #0248B4 0%, #063C90 100%);
+
 }
+
+.email-validation{
+  margin-top: 5px;
+  margin-left:5px;
+  font-size: 12px;
+}
+
+.spacer{
+  flex-grow:1;
+}
+
+.grow, .end{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+}
+
+.grow{
+  flex-grow: 1;
+}
+
+.end{
+  align-self:flex-end;
+}
+
+
+
+
+
+.optBtn{
+  margin-top:10px;
+  color:#999;
+  trasition: all 250ms ease;
+}
+
+.optBtn:hover{
+  cursor:pointer;
+  opacity:.9;
+}
+
+.optBtn.off{
+  color:#666;
+}
+.options{
+  transition: all 250ms ease;
+  overflow:scroll;
+  box-sizing:border-box;
+  max-height:400px;
+}
+
+.options.closed{
+  max-height:0px;
+  visibility:hidden;
+  overflow:hidden;
+}
+
+.options.closed + .end .line{
+    visibility:hidden;
+}
+.end{
+align-self:flex-end;}
+
